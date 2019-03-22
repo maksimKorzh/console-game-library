@@ -8,7 +8,7 @@ that requires moving the character(s) along the map without
 buffered input(no enter key is pressed) as well as a non-scrolling
 screen, e.g. print map at given coordinates.
 
-#API
+# API
 
   - InitScreen()        set up console/terminal environment
   - RefreshScreen()     update screen buffer
@@ -33,7 +33,7 @@ screen, e.g. print map at given coordinates.
   See the video below for more information on impolementation and usage
   of this library.
 
-#Example
+# Example
 int main()
 {
     InitScreen();
@@ -60,6 +60,6 @@ int main()
     return 0;
 }
 
-#YouTube video
+# YouTube video
 is comming soon
 
