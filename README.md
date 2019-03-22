@@ -2,7 +2,7 @@
 A very basic cross-platform console game library dedicated
 for the beginners who want to write their own games
 
-#When to use
+# When to use
 Every time you want to write a game like tetris or snake
 that requires moving the character(s) along the map without
 buffered input(no enter key is pressed) as well as a non-scrolling
