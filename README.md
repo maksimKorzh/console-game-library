@@ -34,31 +34,31 @@ screen, e.g. print map at given coordinates.
   of this library.
 
 # Example
-int main()
-{
-    InitScreen();
-    
-    int key;
-    
-    while(1)
+    int main()
     {
-        key = getch();
-        
-        switch(key)
-        {
-            case...
-            case...
-            case...
-            case...
-        }
-        
-        RefreshScreen();
-    }
-    
-    Leave();
+        InitScreen();
 
-    return 0;
-}
+        int key;
+
+        while(1)
+        {
+            key = getch();
+
+            switch(key)
+            {
+                case...
+                case...
+                case...
+                case...
+            }
+
+            RefreshScreen();
+        }
+
+        Leave();
+
+        return 0;
+    }
 
 # YouTube video
 is comming soon
