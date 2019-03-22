@@ -10,10 +10,10 @@ screen, e.g. print map at given coordinates.
 
 # API
 
-  - InitScreen()        set up console/terminal environment
-  - RefreshScreen()     update screen buffer
-  - getch()             raw getchar() without echoing
-  - Leave()             do some housekeeping (needs some extra work to restore windows console)
+  - InitScreen() - sets up console/terminal environment
+  - RefreshScreen() - updates screen buffer
+  - getch() - gets raw character without echoing and line buffering
+  - Leave() - does some housekeeping (needs some extra work to restore windows console)
 
   use this "char screen[SCREEN_SIZE];" array to print something to screen,
   e.g. to print single character at given position use:
@@ -62,4 +62,3 @@ int main()
 
 # YouTube video
 is comming soon
-
