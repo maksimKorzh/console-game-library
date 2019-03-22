@@ -28,7 +28,7 @@ screen, e.g. print map at given coordinates.
   You can also use sprintf() function, e.g. to print 'Hello' at (10, 20):
   sprintf(screen + (row * MAP_WIDTH + col), "Hello")
   
-  This would print character 'a' at (row, col)
+  This would print character 'Hello' at (row, col)
   
   See the video below for more information on impolementation and usage
   of this library.
