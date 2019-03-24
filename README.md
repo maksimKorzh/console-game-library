@@ -71,3 +71,7 @@ screen, e.g. print map at given coordinates.
 
 # YouTube video: introduction & demonstration
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/7glEsKNYjmw/0.jpg)](https://youtu.be/7glEsKNYjmw)
+
+# YouTube video: initializing & PrintMap()
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C_EdZqImysQ/0.jpg)](https://youtu.be/C_EdZqImysQ)
+
