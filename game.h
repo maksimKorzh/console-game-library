@@ -91,6 +91,7 @@ void InitScreen()
 
     // use ANSI VT100 escape sequences hide cursor and clear screen 
     #ifdef unix
+    printf("\x1b[0;0H");
     printf("\x1b[?25l");
     printf("\x1b[2J");
     #endif
@@ -157,6 +158,7 @@ int getch()
     newattr.c_lflag &= ~( ICANON | ECHO );
     tcsetattr( STDIN_FILENO, TCSANOW, &newattr );
     int key = getchar();
+    printf("\x1b[0;0H");
     tcsetattr( STDIN_FILENO, TCSANOW, &oldattr );
 
     return key;   
