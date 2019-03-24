@@ -42,31 +42,114 @@ screen, e.g. print map at given coordinates.
   See the video below for more information on impolementation and usage
   of this library.
 
-# Example
+# Print character/string at given coordinates (x, y)
+    #include "game.h"
+
     int main()
     {
+        int pos_x = 20, pos_y = 8;
+        int dest_index = pos_y * SCREEN_WIDTH + pos_x;
+
         InitScreen();
 
-        int key;
+        screen[dest_index] = 'a';
+        sprintf(screen + dest_index + 2, "Hello, game.h!");
+        RefreshScreen();
 
-        while(1)
+        getch();
+        Leave();
+        return 0;
+    }
+
+# Usage example
+    #include "game.h"
+
+    #define MAP_WIDTH 10
+    #define MAP_HEIGHT 10
+
+    char map[] = {
+
+        "##########"
+        "#        #"
+        "#        #"
+        "#        #"
+        "#        #"
+        "#    @   #"
+        "#        #"
+        "#        #"
+        "#        #"
+        "##########"
+
+    };
+
+    void GetPlayerPosition(int *pos_x, int *pos_y)
+    {
+        for(int row = 0; row < MAP_HEIGHT; row++)
         {
+            for(int col = 0; col < MAP_WIDTH; col++)
+            {
+                int cell = row * MAP_WIDTH + col;
+
+                if(map[cell] == '@')
+                {
+                    *pos_x = col;
+                    *pos_y = row;
+                }
+            }
+        }
+    }
+
+    void MovePlayer(int pos_x, int pos_y, int offset)
+    {
+        int player = pos_y * MAP_WIDTH + pos_x;
+
+        if(map[player + offset] != '#')
+        {
+            map[player] = ' ';
+            map[player + offset] = '@';
+        }
+    }
+
+    int main()
+    {
+        int pos_x, pos_y, key;
+
+        int center_x = SCREEN_WIDTH / 2 - MAP_WIDTH / 2;
+        int center_y = SCREEN_HEIGHT / 2 - MAP_HEIGHT / 2;
+
+        InitScreen();
+        PrintMap(center_x, center_y, MAP_WIDTH, MAP_HEIGHT, map);
+
+        while(key != 27)
+        {
+            GetPlayerPosition(&pos_x, &pos_y);
             key = getch();
 
             switch(key)
             {
-                case...
-                case...
-                case...
-                case...
+                case 'w':
+                    MovePlayer(pos_x, pos_y, - MAP_WIDTH);
+                    break;
+
+                case 's':
+                    MovePlayer(pos_x, pos_y, MAP_WIDTH);
+                    break;
+
+                case 'a':
+                    MovePlayer(pos_x, pos_y, - 1);
+                    break;
+
+                case 'd':
+                    MovePlayer(pos_x, pos_y, 1);
+                    break;
             }
 
-            RefreshScreen();
+            PrintMap(center_x, center_y, MAP_WIDTH, MAP_HEIGHT, map); 
         }
 
         Leave();
-
         return 0;
+        }
     }
 
 # YouTube video: introduction & demonstration
@@ -78,6 +161,6 @@ screen, e.g. print map at given coordinates.
 # YouTube video: moving character & collision detection
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/z3OEG45GYRA/0.jpg)](https://youtu.be/z3OEG45GYRA)
 
-# YouTube video: moving character & collision detection
+# YouTube video: complete game with game.h
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_LxAa0soHCk/0.jpg)](https://youtu.be/_LxAa0soHCk)
 
