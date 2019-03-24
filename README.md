@@ -75,3 +75,9 @@ screen, e.g. print map at given coordinates.
 # YouTube video: initializing & PrintMap()
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/C_EdZqImysQ/0.jpg)](https://youtu.be/C_EdZqImysQ)
 
+# YouTube video: moving character & collision detection
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/z3OEG45GYRA/0.jpg)](https://youtu.be/z3OEG45GYRA)
+
+# YouTube video: moving character & collision detection
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/_LxAa0soHCk/0.jpg)](https://youtu.be/_LxAa0soHCk)
+
