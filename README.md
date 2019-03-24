@@ -27,17 +27,17 @@ screen, e.g. print map at given coordinates.
   use this "char screen[SCREEN_SIZE];" array to print something to screen,
   e.g. to print single character at given position use:
   
-  int row = 10; int col = 20;
-  
-  screen[row * MAP_WIDTH + col] = 'a';
-  RefreshScreen();
+    int row = 10; int col = 20; 
+    screen[row * MAP_WIDTH + col] = 'a';
+    RefreshScreen();
   
   This would print character 'a' at (row, col)
   
   You can also use sprintf() function, e.g. to print 'Hello' at (10, 20):
-  sprintf(screen + (row * MAP_WIDTH + col), "Hello")
   
-  This would print character 'Hello' at (row, col)
+    sprintf(screen + (20 * MAP_WIDTH + 10), "Hello")
+  
+  This would print character 'Hello' at (10, 20)
   
   See the video below for more information on impolementation and usage
   of this library.
