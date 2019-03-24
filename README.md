@@ -15,6 +15,7 @@ screen, e.g. print map at given coordinates.
   - getch() - gets raw character without echoing and line buffering
   - Leave() - does some housekeeping (needs some extra work to restore windows console)
   - PrintMap - prints game's map to screen at given coordinates (x, y)
+  
     (
         int pos_x,        // x coordinate where to print a map on the screen
         int pos_y,        // y coordinate where to print a map on the screen
