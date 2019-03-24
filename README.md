@@ -14,21 +14,15 @@ screen, e.g. print map at given coordinates.
   - RefreshScreen() - updates screen buffer
   - getch() - gets raw character without echoing and line buffering
   - Leave() - does some housekeeping (needs some extra work to restore windows console)
-  - PrintMap - prints game's map to screen at given coordinates (x, y)
-  
-    (
-        
-        int pos_x,        // x coordinate where to print a map on the screen
-        
-        int pos_y,        // y coordinate where to print a map on the screen
-        
-        int map_width,    // the constant value of map width
-        
+  - PrintMap(int pos_x, int pos_y, int map_width, int map_height, char *map)
+    
+        Prints game's map to screen at given coordinates (x, y)
+    
+        int pos_x,        // x coordinate where to print a map on the screen       
+        int pos_y,        // y coordinate where to print a map on the screen   
+        int map_width,    // the constant value of map width 
         int map_height,   // the constant value of map height
-        
         char *map         // map array
-        
-    )
 
   use this "char screen[SCREEN_SIZE];" array to print something to screen,
   e.g. to print single character at given position use:
